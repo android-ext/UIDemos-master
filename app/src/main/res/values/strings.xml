@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">UIDemos</string>
+    <string name="title_activity_nav_drawer">NavDrawerActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="main_nav_drawer_text">导航抽屉测试</string>
+    <string name="main_swipe_refresh_text">原生刷新测试</string>
+    <string name="nav_content_intro">内容介绍</string>
+    <string name="nav_content_next">内容文本</string>
+    <string name="main_ptr_refresh_text">ptr下拉刷新</string>
+
+    <string name="cube_demo_load_more_list_view">Load More for ListView</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

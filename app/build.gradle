@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.zxxk.ext.uidemos"
+        minSdkVersion 11
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    allprojects {
+        repositories {
+            jcenter()
+            mavenCentral();
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.android.support:design:23.2.0'
+    //    compile 'com.android.support:support-v4:23.2.0'
+    //    compile 'com.squareup.okhttp:okhttp:2.5.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    //    compile 'com.google.android:support-v4:r7'
+    provided 'de.greenrobot:eventbus-annotation-processor:3.0.0-beta1'
+    compile 'de.greenrobot:eventbus:3.0.0-beta1'
+    compile 'in.srain.cube:clog:1.0.2'
+//    compile('in.srain.cube:ultra-ptr:1.0.9.1-SNAPSHOT@aar') {
+//        exclude group: 'in.srain.cube', module: 'clog'
+//    }
+//    compile('in.srain.cube:cube-sdk:1.0.44.33-SNAPSHOT@aar') {
+//        exclude group: 'in.srain.cube', module: 'clog'
+//    }
+    compile project(':okhttputils')
+    compile project(':ptrlibrary')
+}
